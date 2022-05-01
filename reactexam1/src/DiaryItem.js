@@ -1,4 +1,4 @@
-const DiaryItem = ({ author, created_date, id, content }) => {
+const DiaryItem = ({ onDelete, author, created_date, id, content }) => {
   return (
     <div className="DiaryItem">
       <div className="info">
@@ -7,6 +7,15 @@ const DiaryItem = ({ author, created_date, id, content }) => {
         <span className="date">{new Date(created_date).toLocaleString()}</span>
       </div>
       <div className="content"> {content}</div>
+      <button
+        onClick={() => {
+          if (window.confirm(`Delete ${id}??`)) {
+            onDelete(id);
+          } //alert와 유사
+        }}
+      >
+        Delete
+      </button>
     </div>
   );
 };
