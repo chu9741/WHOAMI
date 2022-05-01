@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const DiaryEditor = () => {
+const DiaryEditor = ({ onCreate }) => {
   const [state, setState] = useState({ author: "", content: "" });
 
   const handleChangeState = (e) => {
@@ -20,7 +20,10 @@ const DiaryEditor = () => {
       contentInput.current.focus();
       return;
     }
-    console.log(state);
+    onCreate(state.author, state.content);
+    //console.log(state); // 저장한 diary가 출력
+
+    setState({ author: "", content: "" }); //일기 저장 후 초기화
   };
 
   return (
