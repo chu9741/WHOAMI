@@ -3,26 +3,6 @@ import "./App.css";
 import DiaryEditor from "./DiaryEditor";
 import DiaryList from "./DiaryList";
 
-// const dummyList = [
-//   {
-//     id: 1,
-//     author: "Choi",
-//     content: "hello",
-//     created_date: new Date().getTime(), // 현재 시간 기준으로 생성됨 millisec단위로
-//   },
-//   {
-//     id: 2,
-//     author: "Hyun",
-//     content: "world",
-//     created_date: new Date().getTime(),
-//   },
-//   {
-//     id: 3,
-//     author: "Uk",
-//     content: "Goodbye",
-//     created_date: new Date().getTime(),
-//   },
-// ];
 function App() {
   const [data, setData] = useState([]); // data는 빈배열로 시작
   const dataId = useRef(0);
@@ -46,11 +26,21 @@ function App() {
     setData(newDiaryList); //setData에 넣어주면서 삭제 완료
   }; // app에서 diarylist로 내려주고 diaryitem으로 다시 내려줌,,,
   //onRemove가 수행되면서 state(data)가 바뀜 >> 그게 diaryList{data}를 변화 시킨다.
+
+  const onEdit = (targetId, newContent) => {
+    //수정할 데이터와 ID, 이 함수는 수정폼을 갖고있는 DiaryItem이 호출해야됨
+    setData(
+      data.map((it) =>
+        it.id === targetId ? { ...it, content: newContent } : it
+      )
+    );
+  };
+
   return (
     <div className="App">
       <h2>일기장</h2>
       <DiaryEditor onCreate={onCreate} /> {/* DiaryEditor.js import */}
-      <DiaryList onRemove={onRemove} diaryList={data} />
+      <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
   );
 }
