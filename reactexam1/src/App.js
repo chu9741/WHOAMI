@@ -39,18 +39,18 @@ function App() {
     setData([newItem, ...data]); // newItem이 가장 위로 올라오게 만듬 그리고 spread
   }; // 다이어리에 추가할수있는 데이터 저장, author, content값을 받아서 line27의 data에 업데이트 시킴
 
-  const onDelete = (targetId) => {
+  const onRemove = (targetId) => {
     console.log(`${targetId} is deleted`);
     const newDiaryList = data.filter((it) => it.id !== targetId); // targetId가 아닌것만 모아서 newDiarylist에 저장
     console.log(newDiaryList);
     setData(newDiaryList); //setData에 넣어주면서 삭제 완료
   }; // app에서 diarylist로 내려주고 diaryitem으로 다시 내려줌,,,
-  //
+  //onRemove가 수행되면서 state(data)가 바뀜 >> 그게 diaryList{data}를 변화 시킨다.
   return (
     <div className="App">
       <h2>일기장</h2>
       <DiaryEditor onCreate={onCreate} /> {/* DiaryEditor.js import */}
-      <DiaryList onDelete={onDelete} diaryList={data} />
+      <DiaryList onRemove={onRemove} diaryList={data} />
     </div>
   );
 }

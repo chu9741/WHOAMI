@@ -1,4 +1,4 @@
-const DiaryItem = ({ onDelete, author, created_date, id, content }) => {
+const DiaryItem = ({ onRemove, author, created_date, id, content }) => {
   return (
     <div className="DiaryItem">
       <div className="info">
@@ -10,7 +10,7 @@ const DiaryItem = ({ onDelete, author, created_date, id, content }) => {
       <button
         onClick={() => {
           if (window.confirm(`Delete ${id}??`)) {
-            onDelete(id);
+            onRemove(id);
           } //alert와 유사
         }}
       >
