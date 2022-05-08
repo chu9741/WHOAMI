@@ -3,7 +3,7 @@ import "./App.css";
 import DiaryEditor from "./DiaryEditor";
 import DiaryList from "./DiaryList";
 
-function App() {
+const App = () => {
   const [data, setData] = useState([]); // data는 빈배열로 시작
 
   const dataId = useRef(0);
@@ -30,7 +30,7 @@ function App() {
     getData();
   }, []);
 
-  const onCreate = (author, content) => {
+  const onCreate = useCallback((author, content) => {
     const created_date = new Date().getTime();
 
     const newItem = {
@@ -41,7 +41,7 @@ function App() {
     };
     dataId.current += 1;
     setData([newItem, ...data]); // newItem이 가장 위로 올라오게 만듬 그리고 spread
-  }; // 다이어리에 추가할수있는 데이터 저장, author, content값을 받아서 line27의 data에 업데이트 시킴
+  }, []); // 다이어리에 추가할수있는 데이터 저장, author, content값을 받아서 line27의 data에 업데이트 시킴
 
   const onRemove = useCallback((targetId) => {
     const newDiaryList = data.filter((it) => it.id !== targetId); // targetId가 아닌것만 모아서 newDiarylist에 저장
@@ -65,6 +65,6 @@ function App() {
       <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
   );
-}
+};
 
 export default App;

@@ -53,7 +53,7 @@ const DiaryItem = ({ onEdit, onRemove, author, created_date, id, content }) => {
             />
           </>
         ) : (
-          <>{content}</>
+          <>content</>
         )}
       </div>
       {/* isEdit에 따라 수정 여부 갈림 3항연산자 사용*/}
