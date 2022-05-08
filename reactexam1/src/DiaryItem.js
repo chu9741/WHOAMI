@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const DiaryItem = ({ onEdit, onRemove, author, created_date, id, content }) => {
   useEffect(() => {
-    console.log(1`${id}번째 아이템 렌더`);
+    console.log(`${id}번째 아이템 렌더`);
   }); // 리렌더 되는 아이템을 출력해보기위해
 
   const [isEdit, setIsEdit] = useState(false);
