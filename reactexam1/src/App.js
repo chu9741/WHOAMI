@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import "./App.css";
 import DiaryEditor from "./DiaryEditor";
 import DiaryList from "./DiaryList";
+import Lifecycle from "./Lifecycle";
 
 function App() {
   const [data, setData] = useState([]); // data는 빈배열로 시작
@@ -39,6 +40,7 @@ function App() {
   return (
     <div className="App">
       <h2>일기장</h2>
+      <Lifecycle />
       <DiaryEditor onCreate={onCreate} /> {/* DiaryEditor.js import */}
       <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
