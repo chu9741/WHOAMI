@@ -1,6 +1,10 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const DiaryItem = ({ onEdit, onRemove, author, created_date, id, content }) => {
+  useEffect(() => {
+    console.log(1`${id}번째 아이템 렌더`);
+  }); // 리렌더 되는 아이템을 출력해보기위해
+
   const [isEdit, setIsEdit] = useState(false);
 
   const toggleIsEdit = () => setIsEdit(!isEdit); //호출되면 원래 isEdit반전(toggle) 시킴
@@ -70,4 +74,4 @@ const DiaryItem = ({ onEdit, onRemove, author, created_date, id, content }) => {
   );
 };
 
-export default DiaryItem;
+export default React.memo(DiaryItem);
