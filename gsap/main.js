@@ -1,8 +1,10 @@
+let t1 = gsap.timeline({ paused: true });
+
+//First page
 const menuBtn = document.querySelector(".menu-div");
 const exitBtn = document.querySelector(".exit");
 
-let t1 = gsap.timeline({ paused: true });
-t1.to(".menu", { opacity: 1, duration: 1, top: 0, ease: Power2.easeInOut });
+t1.to(".menu", { opacity: 1, duration: 1, top: 0, ease: Power2.easeInOut }, 6);
 menuBtn.addEventListener("click", () => {
   t1.play().timeScale(1);
 });
