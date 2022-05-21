@@ -4,7 +4,7 @@ import CoverVideo from "../components/CoverVideo";
 
 const pages = styled.section`
   position: relative;
-  min-height: 100vh;
+  min-height: 200vh;
   overflow: hidden;
 `;
 const Home = () => {
@@ -12,6 +12,9 @@ const Home = () => {
     <pages>
       <CoverVideo />
       <h1>Logo</h1>
+      <h1>NavBar</h1>
+      <h1>NavBar</h1>
+      <h1>NavBar</h1>
       <h1>NavBar</h1>
     </pages>
   );

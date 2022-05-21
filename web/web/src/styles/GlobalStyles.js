@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
 }
 
-body{font-family: 'Oleo Script Swash Caps', cursive;
+body{font-family: 'Playfair Display', serif;
 overflow-x:hidden;
 }
 
