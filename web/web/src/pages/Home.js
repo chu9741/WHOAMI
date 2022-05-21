@@ -3,17 +3,17 @@ import styled from "styled-components";
 import CoverVideo from "../components/CoverVideo";
 import NavBar from "../components/NavBar";
 
-const pages = styled.section`
+const Section = styled.section`
   position: relative;
-  min-height: 200vh;
+  min-height: 100vh;
   overflow: hidden;
 `;
 const Home = () => {
   return (
-    <pages>
+    <Section>
       <CoverVideo />
       <NavBar />
-    </pages>
+    </Section>
   );
 };
 
