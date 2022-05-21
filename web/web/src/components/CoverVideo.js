@@ -52,7 +52,7 @@ const Title = styled(motion.div)`
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};
   }
   h2 {
-    font-family: "Playfair Display", seirf;
+    font-family: "Playfair Display", serif;
     font-size: 20px;
     font-weight: 200;
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};

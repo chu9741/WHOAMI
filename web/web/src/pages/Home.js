@@ -13,14 +13,6 @@ const Home = () => {
     <pages>
       <CoverVideo />
       <NavBar />
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
-      <h1>NavBar</h1>
     </pages>
   );
 };
