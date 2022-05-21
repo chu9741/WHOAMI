@@ -78,7 +78,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.13"
+            data-scroll-delay="0.11"
             data-scroll-speed="4"
           >
             J
@@ -86,7 +86,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.09"
+            data-scroll-delay="0.10"
             data-scroll-speed="4"
           >
             e
@@ -94,7 +94,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.05"
+            data-scroll-delay="0.09"
             data-scroll-speed="4"
           >
             n
@@ -102,13 +102,13 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.03"
+            data-scroll-delay="0.08"
             data-scroll-speed="4"
           >
             a
           </motion.h1>
         </div>
-        <motion.h2 data-scroll data-scroll-delay="0.03" data-scroll-speed="2">
+        <motion.h2 data-scroll data-scroll-delay="0.07" data-scroll-speed="3">
           forever nineteen
         </motion.h2>
       </Title>
