@@ -65,7 +65,7 @@ const Right = styled.div`
 
 const About = () => {
   return (
-    <BackgroundSection>
+    <BackgroundSection className="About">
     <Section>
       <Title
         data-scroll
