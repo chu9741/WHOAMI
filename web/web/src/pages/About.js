@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import CoverVideo from "../components/CoverVideo";
-import NavBar from "../components/NavBar";
 
 import "../styles/fonts.css";
 import img1 from "../assets/Images/Image1-1.png";
-import img2 from "../assets/Images/Image2.png";
+import img2 from "../assets/Images/Image2.jpg";
+import img3 from "../assets/Images/Image3.jpg";
 
+const BackgroundSection = styled.section`
+  position: relative;
+  width:100%;
+  background-color: rgb(255, 234, 221);
+`
 const Section = styled.section`
   position: relative;
   min-height: 100vh;
-  width: 90vw;
-  overflow: hidden;
+  width: 80vw;
   background-color: rgb(255, 234, 221);
   display: flex;
 
@@ -39,14 +42,30 @@ const Left = styled.div`
 const Right = styled.div`
   width: 50%;
   position: relative;
+
   img {
     width: 100%;
     height: auto;
   }
+
+  .small-img-1{
+    position: absolute;
+    right:95%;
+    bottom:10%;
+    width:40%;
+  }
+  .small-img-2{
+    position: absolute;
+    left:80%;
+    bottom:30%;
+    width:40%;
+  }
+
 `;
 
 const About = () => {
   return (
+    <BackgroundSection>
     <Section>
       <Title
         data-scroll
@@ -56,27 +75,28 @@ const About = () => {
         About Jena
       </Title>
 
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
+      <Left>
         Hello, My name is Jena.
         <br /> I'm 19 years old. <br /> Welcome to my website!
       </Left>
 
       <Right>
-        <img src={img1} alt="About Jena" srcset=""></img>
-        <img
+        <img src={img1} alt="About Jena" />
+        <img 
+        data-scroll 
+        data-scroll-speed="4"
           src={img2}
           className="small-img-1"
-          alt="About Jena"
-          srcset=""
-        ></img>
-        {/* <img
+          alt="About Jena" />
+        <img 
+        data-scroll 
+        data-scroll-speed = '-3'
           src={img3}
           alt="About Jena"
-          className="small-img-2"
-          srcset=""
-        ></img> */}
+          className="small-img-2" />
       </Right>
     </Section>
+    </BackgroundSection>
   );
 };
 
