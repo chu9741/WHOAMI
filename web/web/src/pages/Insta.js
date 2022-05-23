@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import styled from "styled-components";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import "../styles/fonts.css";
 
@@ -58,7 +60,7 @@ const Right = styled.div`
   min-height: 100vh;
 
   background-color: ${(props) => props.theme.grey};
-  width: 65%;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -69,8 +71,40 @@ const Right = styled.div`
   }
 `;
 const Insta = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  const horizontalRef = useRef(null);
+
+  useLayoutEffect(() => {
+    let element = ref.current;
+    let scrollingElement = horizontalRef.current;
+
+    let pinWrapWidth = scrollingElement.offsetWidth;
+
+    let t1 = gsap.timeline();
+    setTimeout(() => {
+      t1.to(element, {
+        scrollTrigger: {
+          trigger: element,
+          start: "top top",
+          end: pinWrapWidth,
+          scroller: ".App", // locomo elem
+          scrub: true,
+          pin: true,
+          markers: true,
+        },
+        // we haveto increase scrolling height of this section
+        height: `${scrollingElement.scrollWidth}px`,
+        ease: "none",
+      });
+
+      ScrollTrigger.refresh();
+    }, 1000);
+    return () => {};
+  }, []);
+
   return (
-    <Section>
+    <Section ref={ref}>
       <Title data-scroll data-scroll-speed="-1">
         Instagram
       </Title>
@@ -82,7 +116,15 @@ const Insta = () => {
           fugiat nulla pariatur.
         </p>
       </Left>
-      <Right>
+      <Right ref={horizontalRef}>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
+        <h1>img</h1>
         <h1>img</h1>
         <h1>img</h1>
         <h1>img</h1>
