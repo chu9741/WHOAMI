@@ -8,9 +8,10 @@ import img3 from "../assets/Images/Image3.jpg";
 
 const BackgroundSection = styled.section`
   position: relative;
-  width:100%;
+  width: 100%;
+  height: 100%;
   background-color: rgb(255, 234, 221);
-`
+`;
 const Section = styled.section`
   position: relative;
   min-height: 100vh;
@@ -33,9 +34,10 @@ const Title = styled.h1`
 
 const Left = styled.div`
   width: 50%;
-  font-size: 30px;
+  font-size: 25px;
   position: relative;
-  margin-left: 2%;
+  margin-left: 0%;
+  margin-right: 2%;
   margin-top: 20%;
   z-index: 5;
 `;
@@ -48,54 +50,62 @@ const Right = styled.div`
     height: auto;
   }
 
-  .small-img-1{
+  .small-img-1 {
     position: absolute;
-    right:95%;
-    bottom:10%;
-    width:40%;
+    right: 95%;
+    bottom: 10%;
+    width: 40%;
   }
-  .small-img-2{
+  .small-img-2 {
     position: absolute;
-    left:80%;
-    bottom:30%;
-    width:40%;
+    left: 80%;
+    bottom: 30%;
+    width: 40%;
   }
-
 `;
 
 const About = () => {
   return (
     <BackgroundSection className="About">
-    <Section>
-      <Title
-        data-scroll
-        data-scroll-speed="-2"
-        data-scroll-direction="horizontal"
-      >
-        About Jena
-      </Title>
+      <Section>
+        <Title
+          data-scroll
+          data-scroll-speed="-2"
+          data-scroll-direction="horizontal"
+        >
+          About Jena
+        </Title>
 
-      <Left>
-        Hello, My name is Jena.
-        <br /> I'm 19 years old. <br /> Welcome to my website!
-      </Left>
+        <Left>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur.
+          <br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. <br /> Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum. <br />
+        </Left>
 
-      <Right>
-        <img src={img1} alt="About Jena" />
-        <img 
-        data-scroll 
-        data-scroll-speed="4"
-          src={img2}
-          className="small-img-1"
-          alt="About Jena" />
-        <img 
-        data-scroll 
-        data-scroll-speed = '-3'
-          src={img3}
-          alt="About Jena"
-          className="small-img-2" />
-      </Right>
-    </Section>
+        <Right>
+          <img src={img1} alt="About Jena" />
+          <img
+            data-scroll
+            data-scroll-speed="4"
+            src={img2}
+            className="small-img-1"
+            alt="About Jena"
+          />
+          <img
+            data-scroll
+            data-scroll-speed="-3"
+            src={img3}
+            alt="About Jena"
+            className="small-img-2"
+          />
+        </Right>
+      </Section>
     </BackgroundSection>
   );
 };
