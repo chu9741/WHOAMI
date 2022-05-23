@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const NavContainer = styled(motion.div)`
-  width: 74vw;
+  width: 100vw;
   z-index: 6;
-  margin-left: 13.5%;
+  margin-left: 0%;
 
   position: absolute;
   top: ${(props) =>
@@ -31,7 +31,7 @@ const MenuItems = styled(motion.ul)`
   align-items: center;
 
   width: 100%;
-  padding: 10 10rem;
+  padding: 0 10rem;
 `;
 
 // const MenuBtn = styled.li`

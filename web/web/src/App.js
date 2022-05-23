@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Insta from "./pages/Insta";
 
 function App() {
   const containerRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
             <main data-scroll-container ref={containerRef}>
               <Home />
               <About />
+              <Insta />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>
