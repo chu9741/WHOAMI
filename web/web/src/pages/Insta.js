@@ -2,8 +2,11 @@ import React, { useRef, useLayoutEffect } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
 import "../styles/fonts.css";
+
+import img1 from "../assets/Images/Image1-1.png";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -66,10 +69,39 @@ const Right = styled.div`
   align-items: center;
 
   h1 {
+    display: inline-block;
+    width: fit-content;
     width: 5rem;
     margin: 0 2rem;
   }
 `;
+
+const Item = styled(motion.div)`
+display: flex;
+justify-content:center;
+flex-direction:column;
+align-items: center;
+
+width:20rem;
+margin-right: 6rem;
+
+img{ width:100%; height:auto cursor: pointer;}
+h1{display: inline-block; width:fit-content; font-weight:500; text-align:center; cursor:pointer;}`;
+
+const Product = ({ img, title = "" }) => {
+  return (
+    <Item
+      initial={{ filter: "grayscale(100%)" }}
+      whileInView={{ filter: "grayscale(0%)" }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: false, amount: "all" }}
+    >
+      <img src={img} alt={title} />
+      <h1>{title}</h1>
+    </Item>
+  );
+};
+
 const Insta = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
@@ -98,6 +130,22 @@ const Insta = () => {
         ease: "none",
       });
 
+      //horizontal scroll
+      t1.to(scrollingElement, {
+        scrollTrigger: {
+          trigger: scrollingElement,
+          start: "top top",
+          end: pinWrapWidth,
+          scroller: ".App", // locomo elem
+          scrub: true,
+
+          markers: true,
+        },
+        // we haveto increase scrolling height of this section
+        x: -pinWrapWidth,
+        ease: "none",
+      });
+
       ScrollTrigger.refresh();
     }, 1000);
     return () => {};
@@ -117,19 +165,12 @@ const Insta = () => {
         </p>
       </Left>
       <Right ref={horizontalRef}>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
-        <h1>img</h1>
+        <Product img={img1} title="jena" />
+        <Product img={img1} title="jena" />
+        <Product img={img1} title="jena" />
+        <Product img={img1} title="jena" />
+        <Product img={img1} title="jena" />
+        <Product img={img1} title="jena" />
       </Right>
     </Section>
   );
