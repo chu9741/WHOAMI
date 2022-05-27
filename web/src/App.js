@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import GlobalStyles from "./styles/GlobalStyles";
+import { dark } from "./styles/Theme";
+import { useRef } from "react";
+import { AnimatePresence } from "framer-motion";
+
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Insta from "./pages/Insta";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 
 function App() {
+  const containerRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={dark}>
+        <LocomotiveScrollProvider
+          options={{ smooth: true }}
+          watch={[]}
+          containerRef={containerRef}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <ScrollTriggerProxy />
+          <AnimatePresence>
+            <main className="App" data-scroll-container ref={containerRef}>
+              <Home />
+              <About />
+              <Insta />
+            </main>
+          </AnimatePresence>
+        </LocomotiveScrollProvider>
+      </ThemeProvider>
+    </>
   );
 }
-
 export default App;
