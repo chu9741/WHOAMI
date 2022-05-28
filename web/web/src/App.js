@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Insta from "./pages/Insta";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
+import Contact from "./pages/Contact";
 
 function App() {
   const containerRef = useRef(null);
@@ -28,6 +29,7 @@ function App() {
               <Home />
               <About />
               <Insta />
+              <Contact />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

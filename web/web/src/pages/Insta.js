@@ -3,10 +3,14 @@ import styled from "styled-components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
-
+import { Blogs } from "../components/BlogData";
+//import BlogComponent from "../components/BlogComponents";
 import "../styles/fonts.css";
 
+import imgSrc1 from "../assets/Images/imgSrc1.png";
 import img1 from "../assets/Images/Image1-1.png";
+import imgSrc2 from "../assets/Images/imgSrc2.png";
+import imgSrc3 from "../assets/Images/imgSrc3.png";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -58,10 +62,10 @@ const Left = styled.div`
 
 const Right = styled.div`
   position: absolute;
-  left: 35%;
+  left: 10%;
   padding-left: 30%;
   min-height: 100vh;
-
+  width: 100%;
   background-color: ${(props) => props.theme.grey};
 
   display: flex;
@@ -83,22 +87,43 @@ flex-direction:column;
 align-items: center;
 
 width:20rem;
-margin-right: 6rem;
-
+margin-right:0.5rem;
+margin-left: 0.5rem;
+margin-bottom: 1rem;
 img{ width:100%; height:auto cursor: pointer;}
 h1{display: inline-block; width:fit-content; font-weight:500; text-align:center; cursor:pointer;}`;
 
-const Product = ({ img, title = "" }) => {
+const Box = styled.div`
+  border: 2px solid;
+  width: fit-content
+  padding: 2rem 2rem;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 2);
+  cursor: pointer;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+`;
+
+const Text = styled.h1`
+  font-size: 20px;
+`;
+const Product = ({ img, title, link }) => {
   return (
-    <Item
-      initial={{ filter: "grayscale(100%)" }}
-      whileInView={{ filter: "grayscale(0%)" }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: false, amount: "all" }}
-    >
-      <img src={img} alt={title} />
-      <h1>{title}</h1>
-    </Item>
+    <Box>
+      <Item
+        initial={{ filter: "grayscale(100%)" }}
+        whileInView={{ filter: "grayscale(0%)" }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: "all" }}
+      >
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={img} alt={title} />
+          <Text>{title}</Text>
+        </a>
+      </Item>
+    </Box>
   );
 };
 
@@ -123,7 +148,6 @@ const Insta = () => {
           scroller: ".App", // locomo elem
           scrub: true,
           pin: true,
-          markers: true,
         },
         // we haveto increase scrolling height of this section
         height: `${scrollingElement.scrollWidth}px`,
@@ -138,8 +162,6 @@ const Insta = () => {
           end: pinWrapWidth,
           scroller: ".App", // locomo elem
           scrub: true,
-
-          markers: true,
         },
         // we haveto increase scrolling height of this section
         x: -pinWrapWidth,
@@ -153,7 +175,7 @@ const Insta = () => {
 
   return (
     <Section ref={ref}>
-      <Title data-scroll data-scroll-speed="-1">
+      <Title data-scroll data-scroll-speed="-1" className="instagram">
         Instagram
       </Title>
       <Left>
@@ -165,12 +187,11 @@ const Insta = () => {
         </p>
       </Left>
       <Right ref={horizontalRef}>
-        <Product img={img1} title="jena" />
-        <Product img={img1} title="jena" />
-        <Product img={img1} title="jena" />
-        <Product img={img1} title="jena" />
-        <Product img={img1} title="jena" />
-        <Product img={img1} title="jena" />
+        <Product img={img1} title="" link={Blogs[0].link} />
+        <Product img={img1} title="" link={Blogs[0].link} />
+        <Product img={imgSrc1} title={Blogs[2].name} link={Blogs[2].link} />
+        <Product img={imgSrc2} title={Blogs[3].name} link={Blogs[3].link} />
+        <Product img={imgSrc3} title={Blogs[4].name} link={Blogs[4].link} />
       </Right>
     </Section>
   );

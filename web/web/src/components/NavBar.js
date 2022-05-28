@@ -95,14 +95,14 @@ const NavBar = () => {
           About Jena
         </MenuItem>
         <MenuItem
-          onClick={() => handleScroll("#Instagram")}
+          onClick={() => handleScroll(".instagram")}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.8, Y: 0 }}
         >
           Instagram
         </MenuItem>
         <MenuItem
-          onClick={() => handleScroll("#Contact us")}
+          onClick={() => handleScroll(".Contact")}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.8, Y: 0 }}
         >
