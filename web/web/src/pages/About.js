@@ -24,21 +24,36 @@ const Section = styled.section`
 
 const Title = styled.h1`
   font-size: 100px;
-  font-family: "Source Serif Pro", serif;
-
+  font-family: "Roboto", sans-serif;
+  margin-top: 2%;
   position: absolute;
   top: 1rem;
-  left: 5%;
+  left: 0%;
   z-index: 5;
 `;
+const SubTitle = styled.h1`
+  font-size: 120px;
+  font-family: "Roboto", sans-serif;
+  //background-color: red;
+  position: abolute;
+  left: 0%;
+  top: 1rem;
+  padding-top: 2rem;
+  padding-left: 10rem;
+  text-align: right;
 
+  color: rgba(255, 99, 71, 0.2);
+  position: absolute;
+`;
 const Left = styled.div`
   width: 50%;
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+
   margin-left: 0%;
   margin-right: 2%;
-  margin-top: 20%;
+  margin-top: 35%;
   z-index: 5;
 `;
 const Right = styled.div`
@@ -74,18 +89,25 @@ const About = () => {
           data-scroll-direction="horizontal"
         >
           About Jena
+          <SubTitle
+            data-scroll
+            data-scroll-speed="-1"
+            data-scroll-direction="horizontal"
+          >
+            UN-JENA
+          </SubTitle>
         </Title>
 
         <Left>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur.
+          “언제나 너의 곁에 있을게”라는 의미를 담은 이름이다.
           <br />
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. <br /> Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum. <br />
+          <br />
+          JENA는 영어이름처럼 사용한다.
+          <br />
+          <br />
+          UN 접두사를 활용해 ‘사람이 아닌’이라는 의미도 담았다
+          <br />
+          <br />
         </Left>
 
         <Right>

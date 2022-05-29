@@ -65,8 +65,8 @@ const Right = styled.div`
   left: 10%;
   padding-left: 30%;
   min-height: 100vh;
-  width: 150%;
-  background-color: ${(props) => props.theme.grey};
+  width: 170%;
+  background-color: rgb(255, 234, 221);
 
   display: flex;
   justify-content: flex-start;
@@ -100,6 +100,7 @@ const Box = styled.div`
   padding: 2rem 2rem;
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 2);
+  background-color: rgb(210,210,210);
   cursor: pointer;
   z-index: 7;
   display: flex;
