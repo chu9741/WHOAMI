@@ -62,6 +62,7 @@ const MenuItems = styled(motion.ul)`
 const MenuItem = styled(motion.li)`
   color: ${(props) => props.theme.text};
   cursor: pointer;
+  font-family: "Fredericka the Great", cursive;
 `;
 
 const NavBar = () => {

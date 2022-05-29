@@ -27,7 +27,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 40px;
+  font-size: 60px;
   font-family: "Oleo Script Swash Caps", cursive;
   font-weight: 300;
 
@@ -65,7 +65,7 @@ const Right = styled.div`
   left: 10%;
   padding-left: 30%;
   min-height: 100vh;
-  width: 100%;
+  width: 150%;
   background-color: ${(props) => props.theme.grey};
 
   display: flex;
@@ -89,6 +89,7 @@ align-items: center;
 width:20rem;
 margin-right:0.5rem;
 margin-left: 0.5rem;
+margin-top:0.3rem;
 margin-bottom: 1rem;
 img{ width:100%; height:auto cursor: pointer;}
 h1{display: inline-block; width:fit-content; font-weight:500; text-align:center; cursor:pointer;}`;
