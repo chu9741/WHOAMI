@@ -140,7 +140,7 @@ const Contact = () => {
             <Right>
               <Position>Team Manager</Position>
               <Name>Shin Ye Ji</Name>
-              <Email>e-mail : aaaa@ajou.ac.kr</Email>
+              <Email>e-mail : tania99@ajou.ac.kr</Email>
             </Right>
           </Item>
           <Item>

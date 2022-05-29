@@ -40,7 +40,7 @@ const Title = styled.h1`
 
 const Left = styled.div`
   width: 30%;
-  background-color: ${(props) => props.theme.body};
+  background-color: rgb(224,179,210);
   color: ${(props) => props.theme.text};
   min-height: 100vh;
   z-index: 5;
@@ -66,7 +66,7 @@ const Right = styled.div`
   padding-left: 30%;
   min-height: 100vh;
   width: 170%;
-  background-color: rgb(255, 234, 221);
+  background-color: rgb(255, 255, 255);
 
   display: flex;
   justify-content: flex-start;
@@ -95,12 +95,12 @@ img{ width:100%; height:auto cursor: pointer;}
 h1{display: inline-block; width:fit-content; font-weight:500; text-align:center; cursor:pointer;}`;
 
 const Box = styled.div`
-  border: 2px solid;
+  
   width: fit-content
   padding: 2rem 2rem;
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 2);
-  background-color: rgb(210,210,210);
+  background-color: rgb(255,255,255);
   cursor: pointer;
   z-index: 7;
   display: flex;
@@ -109,7 +109,7 @@ const Box = styled.div`
 `;
 
 const Text = styled.h1`
-  font-size: 20px;
+  font-size: 15px;
 `;
 const Product = ({ img, title, link }) => {
   return (
@@ -182,10 +182,17 @@ const Insta = () => {
       </Title>
       <Left>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur.
+          버추얼휴먼 제나 JENA
+          <br />
+          디지털 크리에이터
+          <br />
+          𝐸𝑣𝑒𝑟𝑦𝑡ℎ𝑖𝑛𝑔 𝑖𝑛 𝑦𝑜𝑢𝑟 𝑤𝑜𝑟𝑙𝑑 𝑖𝑠 𝑐𝑟𝑒𝑎𝑡𝑒𝑑 𝑏𝑦 𝑤ℎ𝑎𝑡 𝑦𝑜𝑢 𝑡ℎ𝑖𝑛𝑘!
+          <br />
+          🎀 ғᴏʀᴇᴠᴇʀ ɴɪɴᴛᴇᴇɴ, ᴜɴ ᔕ ᴊᴇɴᴀ
+          <br />
+          🧸 ᴠɪʀᴛᴜᴀʟ ʜᴜᴍᴀɴ ⠀<br />
+          🇰🇷 ᴋᴏʀᴇᴀ⠀
+          <br />
         </p>
       </Left>
       <Right ref={horizontalRef}>

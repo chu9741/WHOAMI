@@ -10,13 +10,13 @@ const BackgroundSection = styled.section`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 234, 221);
+  background-color: white;
 `;
 const Section = styled.section`
   position: relative;
   min-height: 100vh;
   width: 80vw;
-  background-color: rgb(255, 234, 221);
+  background-color: white;
   display: flex;
 
   margin: 0 auto;
@@ -25,10 +25,12 @@ const Section = styled.section`
 const Title = styled.h1`
   font-size: 100px;
   font-family: "Roboto", sans-serif;
-  margin-top: 2%;
+  margin-top: 13%;
   position: absolute;
+  color: rgb(224, 179, 210);
   top: 1rem;
   left: 0%;
+  margin-left: 7%;
   z-index: 5;
 `;
 const SubTitle = styled.h1`
@@ -40,9 +42,10 @@ const SubTitle = styled.h1`
   top: 1rem;
   padding-top: 2rem;
   padding-left: 10rem;
+  margin-left: 0%;
   text-align: right;
 
-  color: rgba(255, 99, 71, 0.2);
+  color: rgb(238, 238, 238);
   position: absolute;
 `;
 const Left = styled.div`
@@ -53,7 +56,7 @@ const Left = styled.div`
 
   margin-left: 0%;
   margin-right: 2%;
-  margin-top: 35%;
+  margin-top: 45%;
   z-index: 5;
 `;
 const Right = styled.div`
@@ -83,20 +86,20 @@ const About = () => {
   return (
     <BackgroundSection className="About">
       <Section>
-        <Title
+        <SubTitle
           data-scroll
-          data-scroll-speed="-2"
+          data-scroll-speed="-1"
           data-scroll-direction="horizontal"
         >
-          About Jena
-          <SubTitle
+          <Title
             data-scroll
-            data-scroll-speed="-1"
+            data-scroll-speed="-2"
             data-scroll-direction="horizontal"
           >
             UN-JENA
-          </SubTitle>
-        </Title>
+          </Title>
+          UN-JENA
+        </SubTitle>
 
         <Left>
           “언제나 너의 곁에 있을게”라는 의미를 담은 이름이다.
