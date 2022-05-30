@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import "../styles/fonts.css";
 import img1 from "../assets/Images/Image1-1.png";
-import img2 from "../assets/Images/Image2.jpg";
-import img3 from "../assets/Images/Image3.jpg";
+import img2 from "../assets/Images/Image2.png";
+import img3 from "../assets/Images/Image3.png";
 
 const BackgroundSection = styled.section`
   position: relative;
@@ -21,11 +21,18 @@ const Section = styled.section`
 
   margin: 0 auto;
 `;
+const TitleText = styled.p`
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  color: rgb(224, 179, 210);
+  margin-left: 0%;
+  text-align: left;
+`;
 
 const Title = styled.h1`
-  font-size: 100px;
-  font-family: "Roboto", sans-serif;
-  margin-top: 13%;
+  font-size: 85px;
+  font-family: "Playfair Display", serif;
+  margin-top: 15%;
   position: absolute;
   color: rgb(224, 179, 210);
   top: 1rem;
@@ -35,13 +42,13 @@ const Title = styled.h1`
 `;
 const SubTitle = styled.h1`
   font-size: 120px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", serif;
   //background-color: red;
   position: abolute;
   left: 0%;
   top: 1rem;
   padding-top: 2rem;
-  padding-left: 10rem;
+  padding-left: 8rem;
   margin-left: 0%;
   text-align: right;
 
@@ -50,12 +57,12 @@ const SubTitle = styled.h1`
 `;
 const Left = styled.div`
   width: 50%;
-  font-size: 20px;
+  font-size: 17px;
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
-
+  color: rgb(224, 179, 210);
   margin-left: 0%;
-  margin-right: 2%;
+  margin-right: 7%;
   margin-top: 45%;
   z-index: 5;
 `;
@@ -73,12 +80,14 @@ const Right = styled.div`
     right: 95%;
     bottom: 10%;
     width: 40%;
+    border-radius: 10px;
   }
   .small-img-2 {
     position: absolute;
     left: 80%;
     bottom: 30%;
     width: 40%;
+    border-radius: 10px;
   }
 `;
 
@@ -97,6 +106,7 @@ const About = () => {
             data-scroll-direction="horizontal"
           >
             UN-JENA
+            <TitleText>"I'll always be with you..."</TitleText>
           </Title>
           UN-JENA
         </SubTitle>
@@ -117,14 +127,14 @@ const About = () => {
           <img src={img1} alt="About Jena" />
           <img
             data-scroll
-            data-scroll-speed="4"
+            data-scroll-speed="3"
             src={img2}
             className="small-img-1"
             alt="About Jena"
           />
           <img
             data-scroll
-            data-scroll-speed="-3"
+            data-scroll-speed="-2"
             src={img3}
             alt="About Jena"
             className="small-img-2"

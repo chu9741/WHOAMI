@@ -1,5 +1,5 @@
-import imgSrc1 from "../assets/Images/Image2.jpg";
-import imgSrc2 from "../assets/Images/Image3.jpg";
+import imgSrc1 from "../assets/Images/Image2.png";
+import imgSrc2 from "../assets/Images/Image3.png";
 
 export const Blogs = [
   {

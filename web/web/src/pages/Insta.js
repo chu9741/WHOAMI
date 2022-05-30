@@ -98,8 +98,8 @@ const Box = styled.div`
   
   width: fit-content
   padding: 2rem 2rem;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7);
   background-color: rgb(255,255,255);
   cursor: pointer;
   z-index: 7;
@@ -182,9 +182,6 @@ const Insta = () => {
       </Title>
       <Left>
         <p>
-          버추얼휴먼 제나 JENA
-          <br />
-          디지털 크리에이터
           <br />
           𝐸𝑣𝑒𝑟𝑦𝑡ℎ𝑖𝑛𝑔 𝑖𝑛 𝑦𝑜𝑢𝑟 𝑤𝑜𝑟𝑙𝑑 𝑖𝑠 𝑐𝑟𝑒𝑎𝑡𝑒𝑑 𝑏𝑦 𝑤ℎ𝑎𝑡 𝑦𝑜𝑢 𝑡ℎ𝑖𝑛𝑘!
           <br />
