@@ -53,7 +53,7 @@ const Text = styled.p`
   font-family: "Noto Sans KR", sans-serif;
   color: rgb(224, 179, 210);
   text-align: right;
-  margin-top: 70%;
+  margin-top: 80%;
 `;
 const Left = styled.div`
   width: 50%;

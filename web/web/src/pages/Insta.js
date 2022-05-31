@@ -3,14 +3,9 @@ import styled from "styled-components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
-import { Blogs } from "../components/BlogData";
+import { InstaData } from "../components/InstaData";
 //import BlogComponent from "../components/BlogComponents";
 import "../styles/fonts.css";
-
-import imgSrc1 from "../assets/Images/imgSrc1.png";
-import img1 from "../assets/Images/Image1-1.png";
-import imgSrc2 from "../assets/Images/imgSrc2.png";
-import imgSrc3 from "../assets/Images/imgSrc3.png";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -90,7 +85,7 @@ width:20rem;
 margin-right:0.5rem;
 margin-left: 0.5rem;
 margin-top:0.3rem;
-margin-bottom: 1rem;
+margin-bottom: 0.7rem;
 img{ width:100%; height:auto cursor: pointer;}
 h1{display: inline-block; width:fit-content; font-weight:500; text-align:center; cursor:pointer;}`;
 
@@ -193,11 +188,31 @@ const Insta = () => {
         </p>
       </Left>
       <Right ref={horizontalRef}>
-        <Product img={img1} title="" link={Blogs[0].link} />
-        <Product img={img1} title="" link={Blogs[0].link} />
-        <Product img={imgSrc1} title={Blogs[2].name} link={Blogs[2].link} />
-        <Product img={imgSrc2} title={Blogs[3].name} link={Blogs[3].link} />
-        <Product img={imgSrc3} title={Blogs[4].name} link={Blogs[4].link} />
+        <Product
+          img={InstaData[4].imgSrc}
+          title={InstaData[4].name}
+          link={InstaData[4].link}
+        />
+        <Product
+          img={InstaData[3].imgSrc}
+          title={InstaData[3].name}
+          link={InstaData[3].link}
+        />
+        <Product
+          img={InstaData[2].imgSrc}
+          title={InstaData[2].name}
+          link={InstaData[2].link}
+        />
+        <Product
+          img={InstaData[1].imgSrc}
+          title={InstaData[1].name}
+          link={InstaData[1].link}
+        />
+        <Product
+          img={InstaData[0].imgSrc}
+          title={InstaData[0].name}
+          link={InstaData[0].link}
+        />
       </Right>
     </Section>
   );
