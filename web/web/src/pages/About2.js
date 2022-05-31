@@ -22,24 +22,25 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 55px;
+  font-size: 70px;
   font-family: "Playfair Display", serif;
   margin-top: 9%;
   position: absolute;
   color: rgb(224, 179, 210);
   top: 1rem;
-  left: 30%;
+  left: 20%;
   //margin-left: 7%;
   z-index: 5;
   //background-color: pink;
 `;
 const SubTitle = styled.h1`
-  font-size: 65px;
+  font-size: 80px;
   font-family: "Playfair Display", serif;
   position: abolute;
   top: 3rem;
   padding-top: 2rem;
   margin-right: 10%;
+
   margin-left: 5%;
   text-align: right;
   white-space: pre;
@@ -53,7 +54,7 @@ const Text = styled.p`
   font-family: "Noto Sans KR", sans-serif;
   color: rgb(224, 179, 210);
   text-align: right;
-  margin-top: 70%;
+  margin-top: 80%;
 `;
 const Left = styled.div`
   width: 50%;
@@ -130,9 +131,9 @@ const About2 = () => {
               data-scroll-speed="2"
               data-scroll-direction="horizontal"
             >
-              FOREVER NINETEEN
+              Forever Nineteen
             </Title>
-            FOREVER NINETEEN
+            Forever Nineteen
           </SubTitle>
           <Text>
             취미는
