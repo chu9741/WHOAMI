@@ -12,7 +12,7 @@ import Insta from "./pages/Insta";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Contact from "./pages/Contact";
 import About2 from "./pages/About2";
-import About3 from "./pages/About3";
+//import About3 from "./pages/About3";
 
 function App() {
   const containerRef = useRef(null);
