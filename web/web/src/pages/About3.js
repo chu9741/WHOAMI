@@ -8,7 +8,7 @@ import img5 from "../assets/Images/Image5.png";
 const Section = styled.section`
   position: relative;
   min-height: 100vh;
-  width: 80vw;
+  width: 90vw;
 
   background-color: white;
   display: flex;

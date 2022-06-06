@@ -60,7 +60,7 @@ const Right = styled.div`
   left: 10%;
   padding-left: 30%;
   min-height: 100vh;
-  width: 170%;
+  width: 200%;
   background-color: rgb(255, 255, 255);
 
   display: flex;

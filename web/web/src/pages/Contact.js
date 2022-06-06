@@ -27,6 +27,10 @@ const Section = styled.section`
   align-items: flex-start;
 
   position: relative;
+  img {
+    width: 100%;
+    //position: absolute;
+  }
 `;
 
 const Title = styled.h1`
@@ -51,8 +55,8 @@ const Contact = () => {
         >
           Contact Us
         </Title>
+        <img src={imgContact} alt="" />
       </Section>
-      <img src={imgContact} alt="" />
     </BackgroundSection>
   );
 };
