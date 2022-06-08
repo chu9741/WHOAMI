@@ -12,7 +12,8 @@ import Insta from "./pages/Insta";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Contact from "./pages/Contact";
 import About2 from "./pages/About2";
-//import About3 from "./pages/About3";
+import About3 from "./pages/About3";
+import Last from "./pages/Last";
 
 function App() {
   const containerRef = useRef(null);
@@ -21,7 +22,11 @@ function App() {
       <GlobalStyles />
       <ThemeProvider theme={dark}>
         <LocomotiveScrollProvider
-          options={{ smooth: true }}
+          options={{
+            smooth: true,
+            smartphone: { smooth: true },
+            tablet: { smooth: true },
+          }}
           watch={[]}
           containerRef={containerRef}
         >
@@ -31,9 +36,10 @@ function App() {
               <Home />
               <About />
               <About2 />
-              {/* <About3 /> */}
+              <About3 />
               <Insta />
               <Contact />
+              <Last />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

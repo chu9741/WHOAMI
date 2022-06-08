@@ -17,6 +17,10 @@ const NavContainer = styled(motion.div)`
   align-items: center;
   color: #fff;
   transition: all 0.3s ease;
+
+  @media (max-width: 40em) {
+    top: ${(props) => (props.click ? "0" : `calc(-50vh -4rem)`)};
+  }
 `;
 
 const MenuItems = styled(motion.ul)`
@@ -32,6 +36,12 @@ const MenuItems = styled(motion.ul)`
 
   width: 100%;
   padding: 0 10rem;
+
+  @media (max-width: 30em) {
+    flex-direction: row;
+    padding: 2rem 0;
+    height: 3vh;
+  }
 `;
 
 // const MenuBtn = styled.li`
@@ -74,7 +84,7 @@ const NavBar = () => {
     let elem = document.querySelector(id);
     setClick(!click);
     scroll.scrollTo(elem, {
-      offset: "0",
+      offset: "20",
       duration: "2000",
       easing: [0.25, 0.0, 0.35, 1.0],
     });
