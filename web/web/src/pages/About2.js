@@ -19,6 +19,13 @@ const Section = styled.section`
   display: flex;
 
   margin: 0 auto;
+
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
+  @media (max-width: 30em) {
+    width: 100vw;
+  }
 `;
 
 const Title = styled.h1`
@@ -32,6 +39,18 @@ const Title = styled.h1`
   //margin-left: 7%;
   z-index: 5;
   //background-color: pink;
+
+  @media (max-width: 64em) {
+    top: 30;
+    left: 0;
+    margin-top: 12%;
+    padding-left: 0;
+    font-size: 30px;
+    //background-color: red;
+  }
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 `;
 const SubTitle = styled.h1`
   font-size: 80px;
@@ -47,6 +66,17 @@ const SubTitle = styled.h1`
 
   color: rgb(238, 238, 238);
   position: absolute;
+
+  @media (max-width: 64em) {
+    top: 10;
+    left: 10;
+    padding-left: 0;
+    font-size: 40px;
+    //background-color: red;
+  }
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 `;
 const Text = styled.p`
   font-size: 18px;
@@ -78,10 +108,32 @@ const Left = styled.div`
     position: absolute;
     //right: 95%;
     left: 7%;
-    top: 7%;
+    top: 8%;
     bottom: 50%;
     height: 50%;
     border-radius: 10px;
+  }
+
+  @media (max-width: 64em) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .small-video-1 {
+      width: 25%;
+      height: auto;
+      left: 10%;
+      bottom: 40%;
+      object-fit: contain;
+    }
+    .small-video-2 {
+      width: 30%;
+      height: auto;
+      left: 60%;
+      bottom: 30%;
+      object-fit: contain;
+    }
   }
 `;
 
@@ -95,6 +147,28 @@ const Right = styled.div`
   margin-right: 2%;
   //margin-top: 45%;
   z-index: 5;
+
+  @media (max-width: 64em){
+    width: 80%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto;
+
+    padding 2rem;
+    padding-bottom: 8rem;
+    //padding-right: 1rem;
+    color:black;
+    backdrop-filter: blur(2px);
+    background-color: ${(props) => `rgba(${props.theme.textRgba}, 0.4)`};
+    border-radius: 20px;
+  }
+
+  @media (max-width: 30em){
+    
+    width: 70%;
+  }
 `;
 
 const About2 = () => {

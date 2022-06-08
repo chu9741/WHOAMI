@@ -77,7 +77,7 @@ const Last = () => {
   const handleScroll = (id) => {
     let elem = document.querySelector(id);
     scroll.scrollTo(elem, {
-      offset: "-10", //-50 or 0
+      offset: "20", //-50 or 0
       duration: "2000",
       easing: [0.25, 0.0, 0.35, 1.0],
     });

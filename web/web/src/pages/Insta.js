@@ -39,7 +39,7 @@ const Left = styled.div`
   color: ${(props) => props.theme.text};
   min-height: 100vh;
   z-index: 5;
-
+  
   position: fixed;
   left: 0;
   display: flex;
