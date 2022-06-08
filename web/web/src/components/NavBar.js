@@ -18,9 +18,9 @@ const NavContainer = styled(motion.div)`
   color: #fff;
   transition: all 0.3s ease;
 
-  @media (max-width: 40em) {
-    top: ${(props) => (props.click ? "0" : `calc(-50vh -4rem)`)};
-  }
+  // @media (max-width: 40em) {
+  //   top: ${(props) => (props.click ? "0" : `calc(-50vh -4rem)`)};
+  // }
 `;
 
 const MenuItems = styled(motion.ul)`
@@ -37,11 +37,11 @@ const MenuItems = styled(motion.ul)`
   width: 100%;
   padding: 0 10rem;
 
-  @media (max-width: 30em) {
-    flex-direction: row;
-    padding: 2rem 0;
-    height: 3vh;
-  }
+  // @media (max-width: 30em) {
+  //   flex-direction: row;
+  //   padding: 2rem 0;
+  //   height: 3vh;
+  // }
 `;
 
 // const MenuBtn = styled.li`

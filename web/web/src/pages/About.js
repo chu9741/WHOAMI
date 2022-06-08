@@ -21,12 +21,12 @@ const Section = styled.section`
 
   margin: 0 auto;
 
-  @media (max-width: 48em) {
-    width: 90vw;
-  }
-  @media (max-width: 30em) {
-    width: 100vw;
-  }
+  // @media (max-width: 48em) {
+  //   width: 90vw;
+  // }
+  // @media (max-width: 30em) {
+  //   width: 100vw;
+  // }
 `;
 const TitleText = styled.p`
   font-size: 30px;
@@ -47,13 +47,13 @@ const Title = styled.h1`
   margin-left: 7%;
   z-index: 5;
 
-  @media (max-width: 64em) {
-    top: 0;
-    left: 0;
-  }
-  @media (max-width: 48em) {
-    width: 90vw;
-  }
+  // @media (max-width: 64em) {
+  //   top: 0;
+  //   left: 0;
+  // }
+  // @media (max-width: 48em) {
+  //   width: 90vw;
+  // }
 `;
 const SubTitle = styled.h1`
   font-size: 120px;
@@ -81,25 +81,25 @@ const Left = styled.div`
   margin-top: 45%;
   z-index: 5;
 
-  @media (max-width: 64em){
-    width: 80%;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 auto;
+  // @media (max-width: 64em){
+  //   width: 80%;
+  //   position: absolute;
+  //   top:50%;
+  //   left:50%;
+  //   transform: translate(-50%, -50%) !important;
+  //   margin: 0 auto;
 
-    padding 2rem;
-    color:black;
-    backdrop-filter: blur(2px);
-    background-color: ${(props) => `rgba(${props.theme.textRgba}, 0.4)`};
-    border-radius: 20px;
-  }
+  //   padding 2rem;
+  //   color:black;
+  //   backdrop-filter: blur(2px);
+  //   background-color: ${(props) => `rgba(${props.theme.textRgba}, 0.4)`};
+  //   border-radius: 20px;
+  // }
 
-  @media (max-width: 30em){
-    
-    width: 70%;
-  }
+  // @media (max-width: 30em){
+
+  //   width: 70%;
+  // }
 `;
 const Right = styled.div`
   width: 50%;
@@ -125,27 +125,27 @@ const Right = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 64em) {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      object-fit: cover;
-    }
-    .small-img-1 {
-      width: 30%;
-      height: auto;
-      left: 5%;
-      bottom: 40%;
-    }
-    .small-img-2 {
-      width: 30%;
-      height: auto;
-      left: 60%;
-      bottom: 30%;
-    }
-  }
+  // @media (max-width: 64em) {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   img {
+  //     object-fit: cover;
+  //   }
+  //   .small-img-1 {
+  //     width: 30%;
+  //     height: auto;
+  //     left: 5%;
+  //     bottom: 40%;
+  //   }
+  //   .small-img-2 {
+  //     width: 30%;
+  //     height: auto;
+  //     left: 60%;
+  //     bottom: 30%;
+  //   }
+  // }
 `;
 
 const About = () => {
