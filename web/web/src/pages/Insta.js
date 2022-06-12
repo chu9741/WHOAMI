@@ -4,7 +4,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { InstaData } from "../components/InstaData";
-//import BlogComponent from "../components/BlogComponents";
 import "../styles/fonts.css";
 
 const Section = styled.section`
