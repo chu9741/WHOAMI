@@ -64,6 +64,17 @@ const Title = styled(motion.div)`
     font-weight: 200;
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};
   }
+
+  @media (max-width: 30em) {
+    h1 {
+      margin-top: 10rem;
+      font-size: 5rem;
+    }
+  }
+
+  // @media (max-width: 30em) {
+  //   object-position: center 50%;
+  // }
 `;
 
 const container = {
